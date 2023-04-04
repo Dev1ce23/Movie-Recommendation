@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/45a6090fdf.js" crossorigin="anonymous"></script>
+    <title>Movie Recommendation</title>
+</head>
+<body>
+    <div class="container">
+    
+        <div class="above_button">
+            <div class="lab">
+                <h6 class="label"><span>Log In </span><span>Sign Up</span></h6>
+            </div>
+            <div class="button"> 
+                <input type="checkbox" id="btn-1" onclick="login()">
+                <label for="btn-1"></label>
+            </div>
+        </div>
+        <div class="box">
+            <div class="theform">
+
+                <div class="login">
+                    <form action="login.php" method="post">
+                        <h4 class="form_head">Log In</h4>
+                        <i class="fa-solid fa-at fa-lg"></i>
+                        <input type="email" placeholder="Email" class="field">
+                        <i class="fa-solid fa-lock "></i>
+                        <input type="password" placeholder="Password" class="field">
+                        <input type="submit" value="Log In" id="submit"><br>
+                        <a href="#home" class="link">Forgot your password?</a>
+                    </form>
+                </div>
+                <div class="register">
+                    <form action="signup.php" method="post">
+                    <h4 class="form_head2">Sign Up</h4>
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" placeholder="Full Name" class="field" name="username">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" placeholder="Phone Number" class="field" name="phone_number">
+                    <i class="fa-solid fa-at fa-lg" id="icon2"></i>
+                    <input type="email" placeholder="Email" class="field" name="email">
+                    <i class="fa-solid fa-lock fa-lg" id="icon3"></i>
+                    <input type="password" placeholder="Password" class="field" name="password">
+                    <input type="submit" value="Sign Up" id="submit"><br>
+                </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+     function login(){       
+        document.getElementsByClassName("theform")[0].classList.toggle('trans');
+     }
+    </script>
+</body>
+</html>
